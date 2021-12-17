@@ -54,14 +54,14 @@ class BST {
     }
 
     int minValue(Node root)  {
-        //initially minval = root
-        int minval = root.value;
-        //find minval
+        //initially minVal = root
+        int minVal = root.value;
+        //find minVal
         while (root.left != null)  {
-            minval = root.left.value;
+            minVal = root.left.value;
             root = root.left;
         }
-        return minval;
+        return minVal;
     }
 
     // insert a node in BST
