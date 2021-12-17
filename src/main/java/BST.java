@@ -1,3 +1,5 @@
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.util.Scanner;
 
 class BST {
