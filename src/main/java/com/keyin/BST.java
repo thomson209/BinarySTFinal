@@ -1,4 +1,4 @@
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+package com.keyin;
 
 import java.util.Scanner;
 
