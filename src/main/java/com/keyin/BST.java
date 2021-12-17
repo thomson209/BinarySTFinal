@@ -140,9 +140,9 @@ class BST {
         }
 
         System.out.println("Pre-order traversal of BST: ");
-        bst.preOrder(root);
+        bst.preOrder(BST.root);
         System.out.println("\nThe root value is: ");
-        System.out.println(root.value);
+        System.out.println(BST.root.value);
         scanner.close();
 
     }
