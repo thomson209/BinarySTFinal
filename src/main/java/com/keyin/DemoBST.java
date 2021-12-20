@@ -2,31 +2,26 @@ package com.keyin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Scanner;
+import java.util.List;
 
 @SpringBootApplication
+@RestController
 public class DemoBST {
+
     public static void main(String[] args) {
         SpringApplication.run(DemoBST.class, args);
-        BST bst = new BST();
-        Scanner scanner = new Scanner(System.in);
+    }
+    @PostMapping("/bst/add")
+    public BST.Node addNode(BST.Node newNode) {
+        return addNode(newNode);
+    }
 
-        System.out.println("Enter the number of nodes for your tree: ");
-        int n = scanner.nextInt();
-        int[] input = new int[n];
-
-        System.out.println("Please enter the values: ");
-        for (int i =0; i < n; i++) {
-            int currInput = scanner.nextInt();
-            bst.insert(currInput);
-            input[i] = currInput;
-        }
-
-        System.out.println("Pre-order traversal of BST: ");
-        bst.preOrder(BST.root);
-        System.out.println("\nThe root value is: ");
-        System.out.println(BST.root.value);
-        scanner.close();
+    @GetMapping("bst/{node}")
+    public List<BST.Node> BST() {
+        return List.of(BST.root);
     }
 }

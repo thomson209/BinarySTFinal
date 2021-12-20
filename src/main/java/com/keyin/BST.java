@@ -2,7 +2,7 @@ package com.keyin;
 
 import java.util.Scanner;
 
-class BST {
+public class BST {
 
     // defines BST node
     class Node {
